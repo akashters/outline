@@ -1065,9 +1065,16 @@ namespace outline {
   void VkApp::GetCursorPos(double& x, double& y) {
     double mx, my;
     glfwGetCursorPos(window_, &mx, &my);
-
     x = mx;
     y = my;
+  }
+
+  bool VkApp::GetKey(int key) {
+    return glfwGetKey(window_, key) == GLFW_PRESS;
+  }
+
+  bool VkApp::GetMouseButton(int button) {
+    return glfwGetMouseButton(window_, button) == GLFW_PRESS;
   }
 
 }

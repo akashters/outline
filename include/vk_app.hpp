@@ -69,6 +69,8 @@ namespace outline {
     virtual void OnDestroy();
 
     void GetCursorPos(double& x, double& y);
+    bool GetKey(int key);
+    bool GetMouseButton(int button);
 
     skity::Canvas* GetCanvas() const { return canvas_.get(); }
 
